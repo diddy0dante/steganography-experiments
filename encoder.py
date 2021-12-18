@@ -28,7 +28,7 @@ flength = len(f.read())
 f.seek(0, 0)
 
 
-with Image.open(args.image).convert('RGB') as im:
+with Image.open(args.image) as im:
 
     # Convert the image data to a list so it can ve edited
     imglist = [list(i) for i in im.getdata()]
