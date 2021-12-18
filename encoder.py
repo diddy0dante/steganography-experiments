@@ -28,9 +28,9 @@ flength = len(f.read())
 f.seek(0, 0)
 
 
-with Image.open(args.image) as im:
+with Image.open(args.image).convert('RGBA') as im:
 
-    # Convert the image data to a list so it can ve edited
+    # Convert the image data to a list so it can be edited
     imglist = [list(i) for i in im.getdata()]
 
     for p_index in range(0, min(flength * 3, len(imglist)), 3):
