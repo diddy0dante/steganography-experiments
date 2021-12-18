@@ -1,7 +1,7 @@
 from PIL import Image
 import argparse
 
-
+# Parse arguments.
 argparser = argparse.ArgumentParser(
     description="image to text steganography converter")
 argparser.add_argument("-i", "--input", type=str, default=None,
@@ -15,8 +15,10 @@ if not args.input:
     print("No input image")
     exit()
 
+# Output string
 asciistring = ""
 
+# Process image data and write to asciistring.
 with Image.open(args.input).convert('RGB') as im:
     rgblist = list(im.getdata())
 
@@ -34,6 +36,7 @@ with Image.open(args.input).convert('RGB') as im:
         except UnicodeDecodeError:
             pass
 
+# Print output to stdout or to the specified file.
 if not args.output:
     print(asciistring)
 else:
