@@ -10,7 +10,7 @@ To use the stenography encoder execute encoder.py with a python interpreter, and
 
     python3.9 encoder.py -it inputtext.txt -im pikachu.png -o secret_pikachu.png
 
-To use the decoder, run the decoder.py program with the `-i` and `-o` arguments. `-i` is followed by the path of the image to be decoded, and `-o` is followed by the name of the output text file. It is possible to run the program without `-o` flag at all, it will then send the output to `stdout`. I highly recommend not sending the output to the shell, because all image data is printed, not just the encrypted contents, the program will most likely print so many lines that you can't scroll up to see the encrypted text. It can however be useful to do this if you wish to pipe the output directly to a different program. It is also possible to directly send the output to a file with `>`, if you prefer to it that way.
+To use the decoder, run the decoder.py program with the `-i` and `-o` arguments. `-i` is followed by the path of the image to be decoded, and `-o` is followed by the name of the output text file. It is possible to run the program without `-o` flag at all, it will then send the output to `stdout`. I highly recommend not sending the output to the shell, because all image data is printed, not just the encrypted contents, the program will most likely print so many lines that you can't scroll up to see the encrypted text. It can however be useful to do this if you wish to pipe the output directly to a different program. It is also possible to directly send the output to a file with `>`, if you prefer to do it that way.
 
     python3.9 decoder.py -i FGzJ3RcakAIXefG.png -o secret_code.txt
 
